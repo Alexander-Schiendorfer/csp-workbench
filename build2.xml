@@ -1,0 +1,52 @@
+<project name="ConstraintSatisfactionWorkbench" default="compile" basedir=".">
+
+	<!-- Specify your main class here. Omit the .class extension. -->
+	<property name="main.class" value="hgb.csp.view.ConstraintSatisfactionApplet"/>
+	<property name="program.jar" value="Hello.jar"/>
+
+	<target name="all" depends="clean,compile"
+   description="Clean build and dist directories, then compile"/>
+
+	<path id="class.path">
+	  <fileset dir="lib">
+	    <include name="**/*.jar" />
+	  </fileset>
+	</path>
+
+
+	<target name="compile" description="Compile Java sources">
+		<mkdir dir="bin"/>
+		<javac srcdir="src" destdir="bin">
+			<include name="**/*.*"/>
+			<classpath refid="class.path" />
+		</javac>
+		<copy todir="bin">
+		    <fileset dir="src"
+			     includes="**/*.xml,**/*.properties,**/*.txt,**/*.ico,**/*.png,**/*.svg" />
+		</copy>
+	</target>
+
+	<target name="run" depends="compile" description="Run java application">
+		<java classname="${main.class}" fork="true" classpath="bin" >
+			<classpath refid="class.path" />		
+		</java>
+	</target>
+	
+	<target name="jar" depends="compile" description="Package to java archive">
+	  <jar destfile="${program.jar}"> 
+	  	<fileset dir="bin" includes="**/*.class"/>
+        <manifest>
+             <attribute name="Main-Class" value="${main.class}"/>
+         </manifest>
+	  </jar>
+	</target>
+
+	<target name="runjar" depends="jar" description="Run java application in java archive">
+		<java jar="${program.jar}" fork="true" classpath="." />
+	</target>
+
+	<target name="clean" description="Delete old build and dist directories">
+		<delete dir="bin" />
+	</target>
+
+</project>

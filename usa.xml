@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!-- csp workbench draft one -->
+<Problem xmlns="http://csp.fh-hagenberg.at">
+	<Variables>
+		<Variable ID="1" domain="allColors" name="AK" />
+		<Variable ID="2" domain="allColors" name="AL" />
+		<Variable ID="3" domain="allColors" name="AR" />
+		<Variable ID="4" domain="allColors" name="AZ" />
+		<Variable ID="5" domain="allColors" name="CA" />
+		<Variable ID="6" domain="allColors" name="CO" />
+		<Variable ID="7" domain="allColors" name="CT" />
+		<Variable ID="8" domain="allColors" name="DE" />
+		<Variable ID="9" domain="allColors" name="FL" />
+		<Variable ID="10" domain="allColors" name="GA" />
+		<Variable ID="11" domain="allColors" name="HI" />
+		<Variable ID="12" domain="allColors" name="IA" />
+		<Variable ID="13" domain="allColors" name="ID" />
+		<Variable ID="14" domain="allColors" name="IL" />
+		<Variable ID="15" domain="allColors" name="IN" />
+		<Variable ID="16" domain="allColors" name="KS" />
+		<Variable ID="17" domain="allColors" name="KY" />
+		<Variable ID="18" domain="allColors" name="LA" />
+		<Variable ID="19" domain="allColors" name="MA" />
+		<Variable ID="20" domain="allColors" name="MD" />
+		<Variable ID="21" domain="allColors" name="ME" />
+		<Variable ID="22" domain="allColors" name="MI" />
+		<Variable ID="23" domain="allColors" name="MN" />
+		<Variable ID="24" domain="allColors" name="MO" />
+		<Variable ID="25" domain="allColors" name="MS" />
+		<Variable ID="26" domain="allColors" name="MT" />
+		<Variable ID="27" domain="allColors" name="NC" />
+		<Variable ID="28" domain="allColors" name="ND" />
+		<Variable ID="29" domain="allColors" name="NE" />
+		<Variable ID="30" domain="allColors" name="NH" />
+		<Variable ID="31" domain="allColors" name="NJ" />
+		<Variable ID="32" domain="allColors" name="NM" />
+		<Variable ID="33" domain="allColors" name="NV" />
+		<Variable ID="34" domain="allColors" name="NY" />
+		<Variable ID="35" domain="allColors" name="OH" />
+		<Variable ID="36" domain="allColors" name="OK" />
+		<Variable ID="37" domain="allColors" name="OR" />
+		<Variable ID="38" domain="allColors" name="PA" />
+		<Variable ID="39" domain="allColors" name="RI" />
+		<Variable ID="40" domain="allColors" name="SC" />
+		<Variable ID="41" domain="allColors" name="SD" />
+		<Variable ID="42" domain="allColors" name="TN" />
+		<Variable ID="43" domain="allColors" name="TX" />
+		<Variable ID="44" domain="allColors" name="UT" />
+		<Variable ID="45" domain="allColors" name="VA" />
+		<Variable ID="46" domain="allColors" name="VT" />
+		<Variable ID="47" domain="allColors" name="WA" />
+		<Variable ID="48" domain="allColors" name="WI" />
+		<Variable ID="49" domain="allColors" name="WV" />
+		<Variable ID="50" domain="allColors" name="WY" />
+	</Variables>
+	<Domains>
+		<Domain name="allColors" type="integers" value="4" />
+	</Domains>
+	<Constraints>
+		<!-- default implementation not equals constraint -->
+		<Constraint first="NY" second="NJ" />
+		<Constraint first="WA" second="OR" />
+		<Constraint first="WA" second="ID" />
+		<Constraint first="MT" second="ID" />
+		<Constraint first="MT" second="ND" />
+		<Constraint first="OR" second="CA" />
+		<Constraint first="OR" second="ID" />
+		<Constraint first="OR" second="NV" />
+		<Constraint first="CA" second="NV" />
+		<Constraint first="UT" second="NV" />
+		<Constraint first="UT" second="CO" />
+		<Constraint first="UT" second="NM" />
+		<Constraint first="AZ" second="NM" />
+		<Constraint first="TX" second="LA" />
+		<Constraint first="TX" second="AR" />
+		<Constraint first="TX" second="OK" />
+		<Constraint first="TX" second="NM" />
+		<Constraint first="CO" second="NM" />
+		<Constraint first="ID" second="NV" />
+		<Constraint first="ID" second="UT" />
+		<Constraint first="AZ" second="UT" />
+		<Constraint first="AZ" second="NV" />
+		<Constraint first="AZ" second="CA" />
+		<Constraint first="AZ" second="CO" />
+		<Constraint first="WY" second="CO" />
+		<Constraint first="WY" second="ID" />
+		<Constraint first="WY" second="UT" />
+		<Constraint first="WY" second="MT" />
+		<Constraint first="WY" second="SD" />
+		<Constraint first="ND" second="MN" />
+		<Constraint first="SD" second="MN" />
+		<Constraint first="IA" second="MN" />
+		<Constraint first="IA" second="SD" />
+		<Constraint first="IA" second="WI" />
+		<Constraint first="IA" second="NE" />
+		<Constraint first="MO" second="NE" />
+		<Constraint first="MO" second="OK" />
+		<Constraint first="IL" second="MN" />
+		<Constraint first="IL" second="IA" />
+		<Constraint first="IL" second="IN" />
+		<Constraint first="IL" second="WI" />
+		<Constraint first="MI" second="WI" />
+		<Constraint first="MI" second="IN" />
+		<Constraint first="MI" second="OH" />
+		<Constraint first="WV" second="OH" />
+		<Constraint first="IN" second="OH" />
+		<Constraint first="KY" second="OH" />
+		<Constraint first="PA" second="OH" />
+		<Constraint first="MN" second="WI" />
+		<Constraint first="IL" second="KY" />
+		<Constraint first="IN" second="KY" />
+		<Constraint first="VA" second="KY" />
+		<Constraint first="IL" second="MO" />
+		<Constraint first="SD" second="MT" />
+		<Constraint first="ND" second="SD" />
+		<Constraint first="MN" second="SD" />
+		<Constraint first="WY" second="NE" />
+		<Constraint first="CO" second="NE" />
+		<Constraint first="CO" second="OK" />
+		<Constraint first="SD" second="NE" />
+		<Constraint first="KS" second="NE" />
+		<Constraint first="KS" second="CO" />
+		<Constraint first="KS" second="MO" />
+		<Constraint first="IA" second="MO" />
+		<Constraint first="KS" second="OK" />
+		<Constraint first="MS" second="LA" />
+		<Constraint first="AR" second="LA" />
+		<Constraint first="AR" second="MO" />
+		<Constraint first="AR" second="MS" />
+		<Constraint first="AL" second="MS" />
+		<Constraint first="AL" second="FL" />
+		<Constraint first="GA" second="FL" />
+		<Constraint first="GA" second="AL" />
+		<Constraint first="GA" second="SC" />
+		<Constraint first="NC" second="SC" />
+		<Constraint first="NC" second="GA" />
+		<Constraint first="AR" second="OK" />
+		<Constraint first="NM" second="OK" />
+		<Constraint first="TN" second="GA" />
+		<Constraint first="TN" second="AL" />
+		<Constraint first="TN" second="MO" />
+		<Constraint first="TN" second="MS" />
+		<Constraint first="TN" second="AR" />
+		<Constraint first="TN" second="NC" />
+		<Constraint first="TN" second="KY" />
+		<Constraint first="TN" second="VA" />
+		<Constraint first="NC" second="VA" />
+		<Constraint first="WV" second="VA" />
+		<Constraint first="KY" second="VA" />
+		<Constraint first="KY" second="MO" />
+		<Constraint first="MD" second="WV" />
+		<Constraint first="KY" second="WV" />
+		<Constraint first="PA" second="WV" />
+		<Constraint first="MD" second="VA" />
+		<Constraint first="MD" second="DE" />
+		<Constraint first="MD" second="PA" />
+		<Constraint first="NJ" second="PA" />
+		<Constraint first="NJ" second="DE" />
+		<Constraint first="PA" second="DE" />
+		<Constraint first="NY" second="PA" />
+		<Constraint first="NY" second="VT" />
+		<Constraint first="NY" second="NH" />
+		<Constraint first="NH" second="MA" />
+		<Constraint first="VT" second="MA" />
+		<Constraint first="VT" second="NH" />
+		<Constraint first="NY" second="MA" />
+		<Constraint first="CT" second="MA" />
+		<Constraint first="CT" second="RI" />
+		<Constraint first="MA" second="RI" />
+		<Constraint first="CT" second="NY" />
+		<Constraint first="NH" second="ME" />
+	</Constraints>
+</Problem>
+
+
